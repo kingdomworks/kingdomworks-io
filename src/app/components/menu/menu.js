@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import './menu.scss';
+
 class MenuComponent extends React.Component {
     constructor() {
         super();
@@ -8,7 +10,7 @@ class MenuComponent extends React.Component {
 
     render() {
         return (
-            <nav className='title'>
+            <nav className='app-menu'>
                 <h1>
                     <Link to='/'>We</Link>
                     {' build '} 

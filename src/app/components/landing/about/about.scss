@@ -1,0 +1,15 @@
+.get-in-touch {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: 0;
+    background: #666;
+    color: white;
+    border: 1px solid #666;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background: white;
+        color: #666;
+    }
+}

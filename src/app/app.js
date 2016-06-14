@@ -2,6 +2,8 @@ import React from 'react';
 
 import MenuComponent from './components/menu';
 
+import './app.scss';
+
 class AppComponent extends React.Component {
     constructor() {
         super();
@@ -9,7 +11,7 @@ class AppComponent extends React.Component {
 
     render() {
         return (
-            <div className="AppWrapper">
+            <div className="app-wrapper">
                 {React.cloneElement(this.props.children)};
                 <MenuComponent/>
             </div>
