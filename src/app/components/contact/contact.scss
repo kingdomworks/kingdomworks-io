@@ -1,0 +1,25 @@
+@import "../../../sass/variables";
+
+section.contact {
+    height: auto;
+    background: $dark;
+    color: $light;
+    padding: 2.5rem;
+
+    .inner {
+        display: flex;
+        padding: 1rem 0;
+
+        div {
+            margin: auto;
+        }
+    }
+
+    h2, h3 {
+        color: $light;
+    }
+
+    p {
+        margin: 0 0 1rem 0;
+    }
+}

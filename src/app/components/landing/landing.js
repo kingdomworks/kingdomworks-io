@@ -2,7 +2,7 @@ import React from 'react';
 
 import JumboComponent from './jumbo';
 import AboutComponent from './about';
-import ContactComponent from './contact';
+import ContactComponent from '../contact';
 
 import './landing.scss';
 

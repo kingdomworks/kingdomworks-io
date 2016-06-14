@@ -21,7 +21,7 @@ class AboutComponent extends React.Component {
                         We are analytic cyberprophets.
                         We are wired socialites.
                     </h3>
-                    <button className="get-in-touch">Reach Out</button>
+                    <a className="get-in-touch" href="#contact-pane">Reach Out</a>
                 </div>
             </section>
         )

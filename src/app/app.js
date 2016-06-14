@@ -12,7 +12,7 @@ class AppComponent extends React.Component {
     render() {
         return (
             <div className="app-wrapper">
-                {React.cloneElement(this.props.children)};
+                {React.cloneElement(this.props.children)}
                 <MenuComponent/>
             </div>
         )

@@ -10,11 +10,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-  color: #666;
+  color: $mid;
 }
 
 h1 {
-  color: #333;
+  color: $dark;
   font-size: 3rem;
 }
 
@@ -33,11 +33,11 @@ body, html {
 }
 
 a {
-  color: #4A90E2;
+  color: $blue;
 }
 
 body {
-  background: #eee;
+  background: $light
 }
 
 .jumbo {
@@ -71,7 +71,7 @@ body {
       z-index: 10;
       
       path {
-        fill: white;
+        fill: $white;
       }
     }
   }
@@ -144,6 +144,6 @@ body {
   bottom: 0;
   margin: auto;
   z-index: 100;
-  background: #fafafa;
+  background: $white;
   padding: 3rem;
 }
