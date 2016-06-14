@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './client/reduxstagram'
+    './src/client.js'
   ],
   output: {
     path: path.join(__dirname, 'www'),
@@ -28,12 +28,12 @@ module.exports = {
     {
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'client')
+      exclude: /node_modules/
     },
     // CSS
     { 
       test: /\.scss$/, 
-      include: path.join(__dirname, 'client'),
+      exclude: /node_modules/,
       loader: 'style-loader!css-loader!autoprefixer-loader?{browsers:["last 5 version", "ie >= 11"]}!sass'
     }
     ]

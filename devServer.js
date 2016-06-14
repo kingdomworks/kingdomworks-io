@@ -5,6 +5,7 @@ var config = require('./config/webpack.config.dev');
 
 var app = express();
 var compiler = webpack(config);
+var root = __dirname + '/www/';
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -13,8 +14,10 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
+app.use(express.static(root)); 
+
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'www/index.html'));
 });
 
 app.listen(7770, 'localhost', function(err) {

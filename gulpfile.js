@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     minify = require('gulp-cssnano'),
     paths = {
       sassDir: './src/sass/',
-      dist: './www/',
+      dist: './www/assets',
       sass: '**/*.scss'
     };
  

@@ -40,8 +40,8 @@ class JumboComponent extends React.Component {
                 <div className='blur'></div>
                 <div ref="bgimg" className='bg'></div>
                 <div className='logo-area'>
-                    <img className='gear' src='img/gear.svg' alt='loading affordance'/>
-                    <img className='logo' src='img/light_logo.svg' alt='company logo'/>
+                    <img className='gear' src='/assets/img/gear.svg' alt='loading affordance'/>
+                    <img className='logo' src='/assets/img/light_logo.svg' alt='company logo'/>
                 </div>
                 <div ref="mgimg" className='mg'></div>
                 <div ref="fgimg" className='fg'></div>
