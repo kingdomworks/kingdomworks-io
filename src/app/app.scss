@@ -1,10 +1,11 @@
 @import "../sass/variables";
 
 .app-wrapper {
-    padding-bottom: 8rem;
+    min-width: $screen-xsm;
+    padding-bottom: 10rem;
 
     @media only screen and (min-width: $screen-tablet) {
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
     }
 }
 

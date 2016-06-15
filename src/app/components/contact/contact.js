@@ -19,7 +19,6 @@ class ContactComponent extends React.Component {
     componentDidMount() {
         Svc.getSocialMediaAccounts().then((socialMediaAccounts) => {
             this.updateAccounts(socialMediaAccounts);
-            console.log(this.state);
         })
     }
 

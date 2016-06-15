@@ -1,2 +1,2 @@
-import AppsListComponent from './AppsList';
+import AppsListComponent from './appsList';
 export default AppsListComponent;

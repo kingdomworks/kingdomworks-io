@@ -5,6 +5,11 @@ class ConsultingComponent extends React.Component {
         super();
     }
 
+    componentDidMount() {
+        var body = document.querySelector('body');
+        body.classList = ['consulting'];
+    }
+
     render() {
         return (
             <h2 className='landing'>

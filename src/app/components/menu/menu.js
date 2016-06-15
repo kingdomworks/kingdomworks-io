@@ -12,11 +12,11 @@ class MenuComponent extends React.Component {
         return (
             <nav className='app-menu'>
                 <h1>
-                    <Link to='/'>We</Link>
+                    <Link to='/' activeCLass="active">We</Link>
                     {' build '} 
-                    <Link to='/apps'>high quality software</Link>, 
+                    <Link to='/apps' activeCLass="active">high quality software</Link>, 
                     {' and '}
-                    <Link to='/consulting'>help others do the same</Link>.
+                    <Link to='/consulting' activeCLass="active">help others do the same</Link>.
                 </h1>
             </nav>
         )
