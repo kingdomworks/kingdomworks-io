@@ -1,7 +1,11 @@
 @import "../sass/variables";
 
 .app-wrapper {
-    padding-bottom: 100px;
+    padding-bottom: 8rem;
+
+    @media only screen and (min-width: $screen-tablet) {
+        padding-bottom: 4rem;
+    }
 }
 
 section .inner {

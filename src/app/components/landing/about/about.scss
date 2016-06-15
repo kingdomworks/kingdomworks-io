@@ -8,7 +8,7 @@
     background: $mid;
     color: $light;
     border: 1px solid $mid;
-    cursor: pointer;
+    text-decoration: none;
 
     &:hover, &:focus {
         background: $light;

@@ -9,17 +9,9 @@
     padding: 1rem;
     width: 100%;
 
-    h1, h2 {
-        font-size: 4vw;
+    h1 {
+        font-size: 2rem;
         line-height: 2;
         display: inline-block;
-
-        @media only screen and (min-width: $screen-tablet) {
-            font-size: 3vw;
-        }
-
-        @media only screen and (min-width: $screen-hd) {
-            font-size: 22px;
-        }
     }
 }

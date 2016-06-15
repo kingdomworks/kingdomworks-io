@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ContactService from './contact.service';
+import SocialAccount from './socialAccount';
 import './contact.scss';
 
 const Svc = new ContactService();
@@ -8,14 +9,17 @@ const Svc = new ContactService();
 class ContactComponent extends React.Component {
     constructor() {
         super();
-        this.emailAccount = 'hi@kingdomworks.io';
+        this.state = {
+            emailAccount: 'hi@kingdomworks.io',
+            socialMedia: []
+        }
         this.updateAccounts = this.updateAccounts.bind(this);
     }
 
     componentDidMount() {
         Svc.getSocialMediaAccounts().then((socialMediaAccounts) => {
-            console.log(socialMediaAccounts);
             this.updateAccounts(socialMediaAccounts);
+            console.log(this.state);
         })
     }
 
@@ -26,6 +30,10 @@ class ContactComponent extends React.Component {
     }
 
     render() {
+        let accounts = this.state.socialMedia.map((account) => {
+            return <SocialAccount key={account.provider} data={account} />
+        })
+
         return (
             <section id="contact-pane" className="contact">
                 <h2 className="section-title outer">Get in touch</h2>
@@ -36,12 +44,16 @@ class ContactComponent extends React.Component {
                     </div>
                     <div className="email">
                         <h3>bussiness inquiries</h3>
-                        <p><a href={'mailto:' + this.emailAccount}>{this.emailAccount}</a></p>
-                    </div>
-                    <div  className="social">
-                        <h3>Say #hello.</h3>
                         <p>
-
+                            Reach out to us at: 
+                            {' '}
+                            <a href={'mailto:' + this.state.emailAccount}>{this.state.emailAccount}</a>
+                        </p>
+                    </div>
+                    <div className="social">
+                        <h3>Say #hello.</h3>
+                        <p className="accounts">
+                            {accounts}
                         </p>
                     </div>
                 </div>

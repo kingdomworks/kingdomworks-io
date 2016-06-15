@@ -1,17 +1,26 @@
 @import "../../../sass/variables";
 
 section.contact {
-    height: auto;
-    background: $dark;
+    height: 50vh;
+    background: $blue;
     color: $light;
-    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     .inner {
         display: flex;
+        flex-direction: column;
         padding: 1rem 0;
+        height: auto;
+
+        @media only screen and (min-width: $screen-tablet) {
+            flex-direction: row;
+        }
 
         div {
-            margin: auto;
+            margin: auto 1rem;
         }
     }
 
@@ -19,7 +28,21 @@ section.contact {
         color: $light;
     }
 
-    p {
-        margin: 0 0 1rem 0;
+    a {
+        color: $white;
     }
+
+    // p {
+    //     margin: 0 0 1rem 0;
+    // }
+
+    .social .accounts {
+        padding-top: 0.5rem;
+        img {
+            width: 15%;
+            max-width: 35px;
+            height: auto;
+            margin: 0 10px 0 0;
+        }
+    } 
 }
