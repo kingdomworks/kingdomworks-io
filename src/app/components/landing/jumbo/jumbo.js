@@ -19,7 +19,6 @@ class JumboComponent extends React.Component {
             ReactDOM.findDOMNode(this.refs.fgimg),
         ];
         imagesLoaded( images, { background: true }, function() {
-            console.log('images loaded', images)
             that.updateLoadingState();
         })
     }

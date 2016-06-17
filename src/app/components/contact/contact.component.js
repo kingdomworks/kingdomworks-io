@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ContactService from './contact.service';
 import SocialAccount from './socialAccount';
 import './contact.scss';
 
+import ContactService from './contact.service';
 const Svc = new ContactService();
 
 class ContactComponent extends React.Component {
