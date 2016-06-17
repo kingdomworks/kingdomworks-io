@@ -32,11 +32,15 @@ class ConsultingComponent extends React.Component {
 
         return (
             <section className='tech'>
-                <h2>So what do you need help with?</h2>
-                <div className="technology-list">
-                    {technologies}
+                <div className="inner">
+                    <h2>So what do you need help with?</h2>
+                    <div className="technology-list">
+                        {technologies}
+                    </div>
+                    <div className="cta">
+                        <a className="get-in-touch" href="#contact-pane">Let's Peer Program</a>
+                    </div>
                 </div>
-                <a className="get-in-touch" href="#contact-pane">Let's Peer Program</a>
             </section>
         )
     }

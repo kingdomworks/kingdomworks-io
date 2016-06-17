@@ -12,8 +12,10 @@ class LandingComponent extends React.Component {
     }
 
     componentDidMount() {
-        var body = document.querySelector('body');
-        body.classList = ['home'];
+        const body = document.querySelector('body');
+        body.classList.remove('apps-list');
+        body.classList.remove('consulting');
+        body.classList.add('home');
     }
  
     render() {

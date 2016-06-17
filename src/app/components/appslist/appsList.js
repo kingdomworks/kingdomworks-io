@@ -9,8 +9,10 @@ class AppsListComponent extends React.Component {
     }
 
     componentDidMount() {
-        var body = document.querySelector('body');
-       body.classList = ['apps-list'];
+        const body = document.querySelector('body');
+        body.classList.remove('home');
+        body.classList.remove('consulting');
+        body.classList.add('apps-list');
     }
 
     render() {

@@ -7,24 +7,35 @@ const VideoSvc = new VideoService();
 class VideoComponent extends React.Component {
     constructor() {
         super();
+        this.state = {
+            videoId: ''
+        };
+        this.updateVideoID = this.updateVideoID.bind(this);
     }
 
     componentDidMount() {
-        // VideoSvc.getSocialMediaAccounts().then((socialMediaAccounts) => {
-        //     this.updateAccounts(socialMediaAccounts);
-        // })
+        VideoSvc.getYoutubeVideos().then((youtubeInfo) => {
+            const myVideoId = youtubeInfo.items[0].id.videoId;
+            console.log(myVideoId);
+            this.updateVideoID(myVideoId);
+        })
     }
 
-    updateAccounts(accounts) {
+    updateVideoID(latestVideoId) {
         this.setState({
-            socialMedia: accounts
+            videoId: latestVideoId
         })
     }
 
     render() {
         return (
             <section className='video-education'>
-                <h2>We care so much about developer education, our Founder posts a new training video every week that anybody can watch for free.</h2>
+                <div className="inner">
+                    <h2>We care so much about developer education, our Founder posts a new training video every week that anybody can watch for free.</h2>
+                    <div className="video-container">
+                        <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + this.state.videoId} frameborder="0"></iframe>
+                    </div>
+                </div>
             </section>
         )
     }

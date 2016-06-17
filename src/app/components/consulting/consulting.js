@@ -12,7 +12,9 @@ class ConsultingComponent extends React.Component {
 
     componentDidMount() {
         var body = document.querySelector('body');
-        body.classList = ['consulting'];
+        body.classList.remove('apps-list');
+        body.classList.remove('home');
+        body.classList.add('consulting');
     }
 
     render() {

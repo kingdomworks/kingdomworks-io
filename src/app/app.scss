@@ -30,3 +30,8 @@ section .inner {
 .section-title, .sub-title {
     text-align: center;
 }
+
+section .inner {
+    max-width: $screen-lg;
+    margin: 0 auto;
+}
