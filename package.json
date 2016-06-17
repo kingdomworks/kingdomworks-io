@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Source code for public facing www.kingdomworks.io",
   "scripts": {
-    "build:webpack": "NODE_ENV=production webpack --config config/webpack.config.prod.js",
+    "build:webpack": "gulp sass && NODE_ENV=production webpack --config config/webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
-    "clean": "rimraf www/*.js www/assets/*.css",
+    "clean": "rimraf www/*.js www/*.map www/assets/*.css",
     "start": "node devServer.js",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
   },

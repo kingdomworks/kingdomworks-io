@@ -9,7 +9,7 @@ module.exports = {
     './src/client.js'
   ],
   output: {
-    path: path.join(__dirname, 'www'),
+    path: path.join(__dirname, '../www'),
     filename: "[name].js",
     chunkFilename: "[id].js"
   },
