@@ -1,3 +1,6 @@
+import 'whatwg-fetch';
+import 'es6-promise';
+
 class VideoService {
     constructor() {
         this.apiURL = 'https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&maxResults=20';

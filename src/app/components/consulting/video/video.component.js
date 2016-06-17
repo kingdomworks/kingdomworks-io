@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './video.scss';
+import 'es6-promise';
 import VideoService from './video.service';
 const VideoSvc = new VideoService();
 
